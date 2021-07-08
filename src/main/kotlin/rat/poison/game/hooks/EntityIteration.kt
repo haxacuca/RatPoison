@@ -128,7 +128,7 @@ fun constructEntities() = every(500, continuous = true) {
     var dzMode = false
 
     for (glowIndex in 0..glowObjectCount) {
-        val glowAddress = glowObject + (glowIndex * GLOW_OBJECT_SIZE)
+        val glowAddress = glowObject + (glowIndex * GLOW_OBJECT_SIZE) + 4
         val entity = csgoEXE.uint(glowAddress)
 
         if (entity > 0L) {
